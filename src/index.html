@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>finders</title>
+    <meta charset="utf-8">
+    <script src='Chart.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">  </head>
+  <body>
+      <header>
+          <div class="header__logo"><p>finders</p></div>
+          <nav>
+              <div class="topnav" id="myTopnav">
+                  <a href="#">СТЕНДЫ</a>
+                  <a href="#">ГОСТИ</a>
+                  <a href="#">ДАННЫЕ</a>
+                  <a href="#">ВЫЙТИ</a>
+                  <a href="#" id="menu" class="icon">&#9776;</a>
+              </div>
+          </nav>
+      </header>
+
+      <main>
+
+              <div class="main__map" id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+                <a href="https://1map.com/ru/map-embed">1 Map</a>
+            </div>
+
+      </main>
+
+      <footer>
+        <div class="wrapper">
+
+            <div class="block__footer">
+                
+                <div>
+                    <button class="link block-center"><p>СТАТИСТИКА ПО СТЕНДАМ</p></button>
+                </div>
+
+               <div class="block-left">
+                   <h2>Павильон</h2>
+                   <ul >
+                    <li class = "flex b">
+                        <img src="https://raw.githubusercontent.com/yakshina/videoProject/0b07b0ea2404252723732493efdd1b7e0ea6c5e0/people.svg" alt="people">
+                        <p>Общее число посетителей в павильоне: 103</p>
+                       
+                       </li>
+                       <li class = "flex">
+                        <img src="https://raw.githubusercontent.com/yakshina/videoProject/42e62b4700952d69d46bcca2980b978ac37423c7/data-02.svg" alt="data">
+                        <p>Общее число стендов в павильоне: 15</p>
+    
+                       </li>
+
+                   </ul>
+                   <div class="flex m">
+                    <h3>Статистика стендов</h3>
+                    <p>Documents</p>
+                   <button class = "stat">PDF</button>
+                   
+                   </div>
+                   
+                   
+   
+                  
+               </div>
+               <div class="block-center">
+                   <h2>Рейтинг стендов</h2>
+                   <table>
+                       <table>
+                           <tr>
+                               <td>Место</td>
+                               <td>Стенд</td>
+                               <td>Гости онлайн</td>
+                               <td>Гости за день</td>
+                           </tr>
+                           <tr>
+                               <td class="full l">1</td>
+                               <td class="full">Мегафон</td>
+                               <td class="full">21</td>
+                               <td class="full r">81</td>
+                           </tr>
+                           <tr>
+                               <td>2</td>
+                               <td>Сisco</td>
+                               <td>15</td>
+                               <td>115</td>
+                           </tr>
+                           <tr>
+                               <td>3</td>
+                               <td>Google</td>
+                               <td>12</td>
+                               <td>79</td>
+                           </tr>
+                           <tr>
+                               <td>4</td>
+                               <td>Yota</td>
+                               <td>9</td>
+                               <td>101</td>
+                           </tr>
+                           <tr>
+                               <td>5</td>
+                               <td>Telegram</td>
+                               <td>8</td>
+                               <td>66</td>
+                           </tr>
+                           <tr>
+                               <td>6</td>
+                               <td>Juniper</td>
+                               <td>5</td>
+                               <td>125</td>
+                           </tr>
+                           <tr>
+                               <td>7</td>
+                               <td>Twitter</td>
+                               <td>4</td>
+                               <td>34</td>
+                           </tr>
+                       </table>
+                   </table>
+   
+                
+               </div>
+               <div class="block-rigth">
+                   <h2>График посещаемости павильона</h2>
+                   <p>Актуально на 17:00</p>
+                   <canvas id="income" width="400"></canvas>
+
+                   
+   
+                
+               </div>
+               
+               
+            </div>
+        </div>
+        
+
+      </footer>
+
+     
+
+
+
+
+      <script src="/src/JS/map.js"></script>
+      <script src="/src/JS/gist.js"></script>
+      <script src="/src/JS/script.js"></script>
+    
+
+  </body>
+  </html>
