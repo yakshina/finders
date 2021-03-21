@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fairo</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/stends.css">
+    
+
+</head>
+<body id="body">
+    <main class="main">
+        <div class="wrapper row">
+    <section class="brend ">
+            <div class="brend__lg">
+                <img src="assets/megafon.png" alt="megafon">
+                <div class="br">
+                    <h1>Мегафон</h1>
+                <p>№ C1</p>
+                </div>
+                
+            </div>
+            <div class="btnNaw">
+                <button >
+                    Обновить
+                </button>
+                <p>Актуально на </p>
+
+            </div>
+            <div class="stend">
+                <h2>О стенде</h2>
+                
+                <ul>
+                    <li>
+                        Аренда (в руб):
+                        <div class="valueArend"></div>
+                    </li>
+                    <li>
+                        Площадь (м<sup>2</sup>): 
+                        <div class="valuePl"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="visit">
+                <h2>Визиты</h2>
+                <ul>
+                    <li>
+                        Визиты с начала выставки: 
+                        <div class="valueVisit"></div>
+                    </li>
+                    <li>
+                        Стоимость привлечения:
+                        <div class="valuePriv"></div>
+                    </li>
+                </ul>
+
+            </div>
+
+    </section>
+
+    <section class="gist ">
+        <h2>График посещаемости стенда</h2>
+        <div>
+            <div id = "bar"></div>
+        </div>
+            
+         
+    </section>
+
+    <section class="data ">
+        <h2>Данные по гостям</h2>
+        
+        <ul>
+            <li>
+                Общее число посещений за день:
+                <div class="valueAll"></div>
+            </li>
+            <li>
+                Уникальные посещения за день:
+                <div class="valueOnly"></div>
+            </li>
+            <li>
+                Процент посещений от общего числа:
+                <div class="valueOnly"></div>
+            </li>
+            
+        </ul>
+        <section class="stat">
+            <div class="heading">
+                <h2>Статистика стендов</h2>
+            <p>Documents</p>
+            </div>
+            
+            <button class = "btn">PDF</button>
+        </section>
+    </section>
+        </div>
+        
+    </main>
+    
+
+    <script src = "app/app.js"></script>
+    <div>
+        <div id = "bar"></div>
+     </div>
+
+     <script language = "javascript">
+        var chart = dc.barChart('#bar');
+
+        d3.csv("data/people.csv", function(errors, people) {
+           var mycrossfilter = crossfilter(people);
+
+           var ageDimension = mycrossfilter.dimension(function(data) { 
+              return ~~((Date.now() - new Date(data.DOB)) / (31557600000)) 
+           });
+           var ageGroup = ageDimension.group().reduceCount();
+
+           chart
+              .width(800)
+              .height(300)
+              .x(d3.scale.linear().domain([15,70]))
+              .brushOn(false)
+              .yAxisLabel("Count")
+              .xAxisLabel("Age")
+              .dimension(ageDimension)
+              .group(ageGroup)
+              .on('renderlet', function(chart) {
+                 chart.selectAll('rect').on('click', function(d) {
+                    console.log('click!', d);
+                 });
+              });
+           chart.render();
+        });
+     </script>
+</body>
+</html>
