@@ -66,7 +66,7 @@
     <section class="gist ">
         <h2>График посещаемости стенда</h2>
         <div>
-            <div id = "bar"></div>
+            
         </div>
             
          
@@ -105,37 +105,6 @@
     
 
     <script src = "app/app.js"></script>
-    <div>
-        <div id = "bar"></div>
-     </div>
-
-     <script language = "javascript">
-        var chart = dc.barChart('#bar');
-
-        d3.csv("data/people.csv", function(errors, people) {
-           var mycrossfilter = crossfilter(people);
-
-           var ageDimension = mycrossfilter.dimension(function(data) { 
-              return ~~((Date.now() - new Date(data.DOB)) / (31557600000)) 
-           });
-           var ageGroup = ageDimension.group().reduceCount();
-
-           chart
-              .width(800)
-              .height(300)
-              .x(d3.scale.linear().domain([15,70]))
-              .brushOn(false)
-              .yAxisLabel("Count")
-              .xAxisLabel("Age")
-              .dimension(ageDimension)
-              .group(ageGroup)
-              .on('renderlet', function(chart) {
-                 chart.selectAll('rect').on('click', function(d) {
-                    console.log('click!', d);
-                 });
-              });
-           chart.render();
-        });
-     </script>
+    
 </body>
 </html>

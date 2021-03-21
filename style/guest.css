@@ -1,1 +1,7 @@
-
+main .wrapper {
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: repeat(2, minmax(min-content, 500px));
+  justify-content: stretch;
+  align-content: start;
+}
