@@ -1,37 +1,26 @@
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
+var chart = dc.barChart('#bar');
+
+         d3.csv("../charts/people.csv", function(errors, people) {
+            var mycrossfilter = crossfilter(people);
+
+            var ageDimension = mycrossfilter.dimension(function(data) { 
+               return ~~((Date.now() - new Date(data.DOB)) / (31557600000)) 
+            });
+            var ageGroup = ageDimension.group().reduceCount();
+
+            chart
+               .width(800)
+               .height(300)
+               .x(d3.scale.linear().domain([15,70]))
+               .brushOn(false)
+               .yAxisLabel("Count")
+               .xAxisLabel("Age")
+               .dimension(ageDimension)
+               .group(ageGroup)
+               .on('renderlet', function(chart) {
+                  chart.selectAll('rect').on('click', function(d) {
+                     console.log('click!', d);
+                  });
+               });
+            chart.render();
+         });
