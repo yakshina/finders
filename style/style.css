@@ -4,7 +4,7 @@
 }
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 10px;
+  font-size: 14px;
   color: #fff;
   background-color: #fff;
 }
@@ -171,8 +171,9 @@ nav li {
 }
 
 .pavil img {
-  width: 12px;
-  height: 15px;
+  width: 15px;
+  height: 18px;
+  margin-right: 2px;
 }
 .footer__top h1 {
   font-family: "Roboto", sans-serif;
@@ -182,7 +183,7 @@ nav li {
 }
 
 canvas {
-  width: 250px;
+  max-width: 450px;
 }
 
 /* columns 1 */
@@ -198,10 +199,9 @@ canvas {
 }
 .block-left img {
   display: flex;
-  width: 15px;
   height: auto;
   margin: 0;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .flex.stat {
@@ -243,8 +243,11 @@ canvas {
   margin-bottom: 25px;
 }
 .pavil li {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-wrap: nowrap;
 }
+
 .heading {
   display: flex;
   flex-direction: column;
