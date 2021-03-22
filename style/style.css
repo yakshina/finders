@@ -27,13 +27,14 @@ li {
 .logo {
   display: block;
   margin-right: 15px;
-  width: 124px;
-  height: 60px;
-  background: no-repeat center url("../assets/FairoLogo.svg");
+  min-width: 122px;
+  min-height: 55px;
+  background: no-repeat center url("/assets/FairoLogo.svg");
 }
 .menu {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 
 .menu li a {
@@ -41,8 +42,8 @@ li {
   letter-spacing: 0.05em;
   color: #636e7b;
   font-family: "Roboto", sans-serif;
-  font-weight: bold;
   font-size: 14px;
+  vertical-align: middle;
 }
 .menu li a:hover {
   color: #731982;
@@ -57,6 +58,7 @@ li {
 }
 .menu li {
   margin-right: 175px;
+  margin-bottom: 0;
 }
 
 .menu li:last-child {
@@ -67,75 +69,98 @@ li {
   display: flex;
   align-items: center;
   padding: 35px 0;
+  height: 55px;
+}
+nav li {
+  height: 14px;
 }
 
 /* map style */
 .map {
-  margin: 15px 0;
+  margin: 15px auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 1200px;
 }
+
 .st0 {
-  clip-path: url(#SVGID_2_);
-}
-.st1 {
   fill: #cccccc;
 }
-.st2 {
+.st1 {
   fill: #11a3be;
 }
-.st3 {
-  clip-path: url(#SVGID_2_);
+.st2 {
   fill: none;
 }
+.st3 {
+  fill: #16a3be;
+}
 .st4 {
-  clip-path: url(#SVGID_2_);
-  fill: #16a3be;
-}
-.st5 {
-  clip-path: url(#SVGID_2_);
-  fill: #ffffff;
-  stroke: #0ba3be;
-}
-.st6 {
-  fill: #16a3be;
-}
-.st7 {
   font-family: "Arial-Black";
 }
-.st8 {
-  font-size: 24.2953px;
+.st5 {
+  font-size: 24.2952px;
 }
-.st9 {
+.st6 {
   fill: #ffffff;
   stroke: #0ba3be;
 }
-.st10 {
-  fill: #0099cc;
-}
-.st11 {
+.st7 {
   fill: #666666;
 }
+.st8 {
+  font-size: 17.9343px;
+}
+.st9 {
+  font-size: 16.3164px;
+}
+.st10 {
+  font-size: 18.9886px;
+}
+.st11 {
+  font-size: 16.2808px;
+}
 .st12 {
-  font-size: 12px;
+  font-size: 16.3941px;
 }
 .st13 {
+  font-size: 15.0417px;
+}
+.st14 {
+  font-size: 16.1133px;
+}
+.st15 {
+  font-size: 16.2554px;
+}
+.st16 {
+  font-size: 18.0326px;
+}
+.st17 {
+  font-size: 16.4144px;
+}
+.st18 {
+  font-size: 17.2111px;
+}
+.st19 {
   fill: transparent;
   stroke: transparent;
   stroke-width: 5;
   stroke-miterlimit: 10;
 }
-.st13:hover {
+.st19:hover {
   fill: transparent;
   stroke: #3fa9f5;
   stroke-width: 5;
   stroke-miterlimit: 10;
 }
-.st13:active {
+.st19:active {
   fill: rgba(22, 163, 190, 0.3);
   stroke: #3fa9f5;
   stroke-width: 5;
   stroke-miterlimit: 10;
 }
-
 /* FOOTER top*/
 
 .footer__top {
@@ -246,6 +271,25 @@ td {
   background-color: #731982;
 }
 
+.footer .logo {
+  display: block;
+  margin-right: 15px;
+  min-width: 122px;
+  min-height: 55px;
+  background: no-repeat center url("/assets/FairoLogo.svg");
+}
+
+.footer .menu {
+  display: flex;
+  flex-direction: column;
+}
+.footer span {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 12px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05em;
+}
 .social {
   padding: 24px 0;
 }
@@ -264,6 +308,13 @@ td {
 
 .footer .menu li:last-child {
   margin-right: 0;
+}
+.footer .logo {
+  display: block;
+  margin-right: 15px;
+  min-width: 122px;
+  min-height: 55px;
+  background: no-repeat center url("/assets/Fairologowhite.svg");
 }
 
 .facebook {
@@ -287,28 +338,28 @@ td {
 .instagram:hover,
 .pinterest:hover,
 .telegram:hover {
-  border: 2px solid #cd6326;
+  border: 2px solid #00b956;
   border-radius: 50%;
   background-color: transparent;
 }
 
 .facebook:hover {
-  background: no-repeat top center url("../assets/facebook.svg");
+  background: no-repeat top center url("../assets/Telegram_white.svg");
 }
 
 .instagram:hover {
-  background: no-repeat top center url("../assets/inst.svg");
+  background: no-repeat top center url("../assets/Viber_white.svg");
 }
 .pinterest:hover {
-  background: no-repeat top center url("../assets/pin.svg");
+  background: no-repeat top center url("../assets/Github.svg");
 }
 
 .telegram:hover {
-  background: no-repeat top center url("../assets/telegram.svg");
+  background: no-repeat top center url("../assets/Figma_white.svg");
 }
 .facebook:active,
 .instagram:active,
 .pinterest:active,
 .telegram:active {
-  border: 2px solid #8f5613;
+  border: 2px solid #00b956;
 }

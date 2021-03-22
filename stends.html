@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/stends.css">
-    
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js'></script>
 </head>
 <body id="body">
     <main class="main">
@@ -26,10 +25,11 @@
                 
             </div>
             <div class="btnNaw">
-                <button >
+                <button value="Refresh Page" onClick="window.location.reload();">
                     Обновить
                 </button>
-                <p>Актуально на </p>
+                <p>Актуально на</p>
+                <span id = "date"></span>
 
             </div>
             <div class="stend">
@@ -37,10 +37,13 @@
                 
                 <ul>
                     <li>
+                        <img src="/assets/u_dollar-alt.svg" alt="dollar">
                         Аренда (в руб):
                         <div class="valueArend"></div>
                     </li>
                     <li>
+                        
+                        <img src="/assets/u_stend-alt.svg" alt="stend">
                         Площадь (м<sup>2</sup>): 
                         <div class="valuePl"></div>
                     </li>
@@ -50,10 +53,12 @@
                 <h2>Визиты</h2>
                 <ul>
                     <li>
+                        <img src="/assets/fi_users.svg" alt="user">
                         Визиты с начала выставки: 
                         <div class="valueVisit"></div>
                     </li>
                     <li>
+                        <img src="/assets/u_dollar-alt.svg" alt="dol">
                         Стоимость привлечения:
                         <div class="valuePriv"></div>
                     </li>
@@ -65,8 +70,17 @@
 
     <section class="gist ">
         <h2>График посещаемости стенда</h2>
-        <div>
-            
+        <div class="label">
+            <div class="color_l"></div>
+            <span>Впервые посетили стенд</span>
+        </div>
+        <div class="label">
+            <div class="color_l b"></div>
+        <span>Посетили стенд повторно</span>
+        </div>
+        
+        <div .canvas>
+            <canvas id="gist" width="550"></canvas>
         </div>
             
          
@@ -77,14 +91,17 @@
         
         <ul>
             <li>
+                <img src="/assets/fi_users.svg" alt="user">
                 Общее число посещений за день:
                 <div class="valueAll"></div>
             </li>
             <li>
+                <img src="/assets/fi_user-plus.svg" alt="user plus">
                 Уникальные посещения за день:
                 <div class="valueOnly"></div>
             </li>
             <li>
+                <img src="/assets/fi_percent.svg" alt="percent">
                 Процент посещений от общего числа:
                 <div class="valueOnly"></div>
             </li>
@@ -103,8 +120,9 @@
         
     </main>
     
-
+    <script src = "app/date.js" type="text/javascript"></script>
     <script src = "app/app.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script> 
+    <script src = "app/gist.js"></script>
 </body>
 </html>

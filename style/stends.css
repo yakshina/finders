@@ -1,7 +1,7 @@
 main {
   margin: 15px 0;
   color: #68696e;
-  height: 555px;
+  min-height: 600px;
   font-size: 14px;
 }
 h2 {
@@ -14,21 +14,29 @@ li {
 main .wrapper {
   padding: 48px 0;
 }
+main li {
+  display: flex;
+  align-items: center;
+}
+li img {
+  margin-right: 11px;
+}
 .brend__lg {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 42px;
+  width: 250px;
 }
 
 .brend__lg img {
-  width: 70px;
+  width: 60px;
 }
 
 .row {
   display: grid;
   justify-content: space-between;
-  column-gap: 50px;
+  column-gap: 20px;
   grid-template-columns: repeat(3, minmax(min-content, 372px));
   justify-content: stretch;
   align-content: start;
@@ -57,6 +65,11 @@ main .wrapper {
   font-weight: bold;
   text-align: center;
 }
+.btnNaw button:hover {
+  background: #731982;
+  cursor: pointer;
+}
+
 .stend {
   margin-bottom: 60px;
 }
@@ -86,6 +99,10 @@ main .wrapper {
   margin-right: 15px;
 }
 
+.stat .btn:hover {
+  background-color: #731982;
+}
+
 .heading {
   display: flex;
   flex-direction: column;
@@ -93,4 +110,42 @@ main .wrapper {
 }
 .stat h2 {
   margin-bottom: 0px;
+}
+
+#date {
+  margin-left: 5px;
+}
+
+#gist label {
+  font-size: 9px;
+  color: #68696e;
+}
+
+.gist {
+  display: flex;
+  flex-direction: column;
+}
+.gist h2 {
+  margin-bottom: 15px;
+}
+
+canvas {
+  margin-left: -27px;
+  min-width: 550px;
+}
+.label {
+  display: none;
+}
+.color_l {
+  background-color: #00b956;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  display: none;
+}
+
+.b {
+  background-color: #e5e5e5;
 }
