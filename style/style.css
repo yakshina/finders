@@ -77,14 +77,8 @@ nav li {
 
 /* map style */
 .map {
-  margin: 15px auto;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  width: 1200px;
+  margin: 15px 0;
 }
-
 .st0 {
   fill: #cccccc;
 }
