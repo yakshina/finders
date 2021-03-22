@@ -160,6 +160,7 @@ nav li {
 .footer__top {
   background-color: #731982;
   padding: 48px 0;
+  position: relative;
 }
 .footer__row {
   display: grid;
@@ -177,6 +178,11 @@ nav li {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   letter-spacing: 0.05em;
+  font-weight: normal;
+}
+
+canvas {
+  width: 250px;
 }
 
 /* columns 1 */
@@ -204,7 +210,49 @@ nav li {
 .flex.b {
   margin-top: 10px;
 }
+.stat {
+  display: flex;
+  margin-top: 94px;
+  align-items: center;
+}
 
+.stat .btn {
+  display: block;
+  align-items: center;
+  width: 85px;
+  height: 40px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 32px;
+  background: #fff;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #00b956;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.stat .btn:hover {
+  background-color: #666666;
+}
+.footer__top h1 {
+  margin-bottom: 25px;
+}
+.pavil li {
+  margin-bottom: 10px;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  margin-right: 9px;
+}
+.stat h2 {
+  margin-bottom: 0px;
+}
 .btn {
   width: 65px;
   font-family: inherit;
@@ -270,7 +318,7 @@ td {
   margin-right: 15px;
   min-width: 122px;
   min-height: 55px;
-  background: no-repeat center url("/assets/FairoLogo.svg");
+  background: no-repeat center url("/assets/Fairologowhite.svg");
 }
 
 .footer .menu {
@@ -356,4 +404,17 @@ td {
 .pinterest:active,
 .telegram:active {
   border: 2px solid #00b956;
+}
+
+.statistik {
+  position: absolute;
+  width: 349px;
+  height: 42px;
+  font-size: 18px;
+  top: -15px;
+  left: 550px;
+  border-radius: 32px;
+  background-color: #731982;
+  text-align: center;
+  padding: 10px;
 }

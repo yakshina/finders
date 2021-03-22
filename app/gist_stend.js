@@ -18,7 +18,9 @@ var myChart = new Chart(ctx, {
    //   ]
         datasets: [
         {
-         label: 'Впервые посетили павильон',
+         label: 
+         'Впервые посетили павильон',
+         
          
          data: [36,24,15,44,12,32,10],
          backgroundColor: [
