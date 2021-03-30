@@ -134,10 +134,24 @@ td {
   main .wrapper {
     display: grid;
     column-gap: 5%;
-    grid-template-columns: repeat(1, 0.8fr);
+    grid-template-columns: repeat(1, 1fr);
     justify-content: stretch;
     align-content: start;
     font-family: "Open Sans", sans-serif;
     padding: 15px;
+  }
+  .valueMin {
+    font-size: 24px;
+    line-height: 28px;
+    margin-left: auto;
+  }
+  table {
+    border: transparent;
+    margin-left: -15px;
+    font-size: 14px;
+    /* Ширина таблицы */
+    max-width: 300px;
+    border-spacing: 15px;
+    border-collapse: separate;
   }
 }
