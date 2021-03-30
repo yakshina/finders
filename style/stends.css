@@ -151,6 +151,7 @@ button:hover {
   background: #6868c5;
   cursor: pointer;
 }
+
 @media (max-width: 1150px) {
   .row {
     display: grid;

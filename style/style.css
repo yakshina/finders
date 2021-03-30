@@ -15,6 +15,14 @@ li {
   list-style: none;
   display: block;
 }
+button {
+  box-shadow: 0 3px 0px rgba(60, 53, 74, 0.2);
+}
+
+button:hover {
+  box-shadow: 0 3px 0px rgba(60, 53, 74, 0.5);
+}
+
 .header {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
@@ -47,8 +55,8 @@ li {
 }
 .menu li a:hover {
   color: #6868c5;
-  font-weight: 900;
-  transition-duration: 1s;
+  font-weight: 500;
+  transition-duration: 0.5s;
 }
 
 .menu li {
@@ -65,9 +73,11 @@ li {
   align-items: center;
   padding: 35px 0;
   height: 55px;
+  transition-duration: 1s;
 }
 nav li {
   height: 14px;
+  transition-duration: 1s;
 }
 
 /* map style */
@@ -87,7 +97,7 @@ nav li {
   fill: #676766;
 }
 .st2 {
-  font-family: "PTSans-Bold";
+  font-family: "Roboto";
 }
 .st3 {
   font-size: 16px;
@@ -109,10 +119,10 @@ nav li {
   stroke: #6fbe95;
   stroke-width: 8;
   stroke-miterlimit: 10;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 .st6:active {
-  fill: rgba(22, 163, 190, 0.3);
+  fill: rgba(102, 204, 153, 0.3);
   stroke: #6fbe95;
   stroke-width: 8;
   stroke-miterlimit: 10;
@@ -451,16 +461,7 @@ td {
   header .responsive {
     margin-top: -172px;
     height: 400px;
-  }
-  header .responsive .menu {
-    display: flex;
-    flex-direction: column;
-    margin-top: 200px;
-    background-color: #fff;
-    text-align: right;
-    z-index: 99;
-    align-items: flex-end;
-    margin-right: -40px;
+    transition-duration: 1s;
   }
   header .responsive .menu li {
     display: block;
@@ -470,6 +471,23 @@ td {
     padding: 0;
     text-align: right;
   }
+  header .responsive .menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    background-color: #fff;
+    text-align: right;
+    color: #636e7b;
+    align-items: flex-end;
+    margin-right: -40px;
+    transition-property: margin-top, background-color, color;
+    transition-duration: 1s, 0.7s, 0.7s;
+  }
+  header .responsive li {
+    transition-delay: 2s;
+    transition-property: margin-top;
+  }
+
   header .responsive ul {
     text-align: right;
     display: flex;
