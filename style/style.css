@@ -29,7 +29,7 @@ li {
   margin-right: 15px;
   min-width: 122px;
   min-height: 55px;
-  background: no-repeat center url("/assets/FairoLogo.svg");
+  background: no-repeat center url("/assets/Fairo_logo_black.svg");
 }
 .menu {
   display: flex;
@@ -46,7 +46,8 @@ li {
   vertical-align: middle;
 }
 .menu li a:hover {
-  color: #731982;
+  color: #6868c5;
+  font-weight: 900;
 }
 
 .icon {
@@ -57,7 +58,7 @@ li {
   display: none;
 }
 .menu li {
-  margin-right: 175px;
+  margin-right: 10em;
   margin-bottom: 0;
 }
 
@@ -78,87 +79,53 @@ nav li {
 /* map style */
 .map {
   margin: 15px 0;
+  margin-bottom: 20px;
+  border: 8px solid #6fbe95;
+  border-radius: 4px;
 }
+
 .st0 {
-  fill: #cccccc;
+  fill: #ffffff;
+  stroke: #6fbe95;
+  stroke-miterlimit: 10;
 }
 .st1 {
-  fill: #11a3be;
+  fill: #676766;
 }
 .st2 {
-  fill: none;
+  font-family: "PTSans-Bold";
 }
 .st3 {
-  fill: #16a3be;
+  font-size: 16px;
 }
 .st4 {
-  font-family: "Arial-Black";
+  font-size: 12px;
 }
 .st5 {
-  font-size: 24.2952px;
+  opacity: 0.7;
 }
 .st6 {
-  fill: #ffffff;
-  stroke: #0ba3be;
-}
-.st7 {
-  fill: #666666;
-}
-.st8 {
-  font-size: 17.9343px;
-}
-.st9 {
-  font-size: 16.3164px;
-}
-.st10 {
-  font-size: 18.9886px;
-}
-.st11 {
-  font-size: 16.2808px;
-}
-.st12 {
-  font-size: 16.3941px;
-}
-.st13 {
-  font-size: 15.0417px;
-}
-.st14 {
-  font-size: 16.1133px;
-}
-.st15 {
-  font-size: 16.2554px;
-}
-.st16 {
-  font-size: 18.0326px;
-}
-.st17 {
-  font-size: 16.4144px;
-}
-.st18 {
-  font-size: 17.2111px;
-}
-.st19 {
   fill: transparent;
   stroke: transparent;
-  stroke-width: 5;
+  stroke-width: 8;
   stroke-miterlimit: 10;
 }
-.st19:hover {
+.st6:hover {
   fill: transparent;
-  stroke: #3fa9f5;
-  stroke-width: 5;
+  stroke: #6fbe95;
+  stroke-width: 8;
   stroke-miterlimit: 10;
 }
-.st19:active {
+.st6:active {
   fill: rgba(22, 163, 190, 0.3);
-  stroke: #3fa9f5;
-  stroke-width: 5;
+  stroke: #6fbe95;
+  stroke-width: 8;
   stroke-miterlimit: 10;
 }
 /* FOOTER top*/
 
 .footer__top {
-  background-color: #731982;
+  background-color: #6868c5;
   padding: 48px 0;
   position: relative;
 }
@@ -231,7 +198,7 @@ canvas {
   font-size: 1rem;
   cursor: pointer;
   font-weight: bold;
-  background-color: #00b956;
+  background-color: #66cc99;
   align-items: center;
   margin-right: 15px;
 }
@@ -263,7 +230,7 @@ canvas {
   border: 0;
   border-radius: 32px;
   background: #fff;
-  color: #00b956;
+  color: #66cc99;
   padding: 8px 16px;
   font-size: 1rem;
   cursor: pointer;
@@ -293,7 +260,7 @@ thead th:nth-child(4) {
   width: 1%;
 }
 .full {
-  background: #00b956;
+  background: #66cc99;
 }
 .r {
   border-top-right-radius: 10px;
@@ -313,7 +280,7 @@ td {
 /* FOOTER */
 
 .footer {
-  background-color: #731982;
+  background-color: #6868c5;
 }
 
 .footer .logo {
@@ -359,7 +326,7 @@ td {
   margin-right: 15px;
   min-width: 122px;
   min-height: 55px;
-  background: no-repeat center url("/assets/Fairologowhite.svg");
+  background: no-repeat center url("/assets/Fairo_logo_white.svg");
 }
 
 .facebook {
@@ -383,7 +350,7 @@ td {
 .instagram:hover,
 .pinterest:hover,
 .telegram:hover {
-  border: 2px solid #00b956;
+  border: 2px solid #66cc99;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -406,18 +373,43 @@ td {
 .instagram:active,
 .pinterest:active,
 .telegram:active {
-  border: 2px solid #00b956;
+  border: 2px solid #66cc99;
 }
 
 .statistik {
   position: absolute;
-  width: 349px;
-  height: 42px;
+  width: 25%;
+  height: 10%;
   font-size: 18px;
-  top: -15px;
-  left: 550px;
+  top: -2%;
+  left: 38%;
   border-radius: 32px;
-  background-color: #731982;
+  background-color: #6868c5;
   text-align: center;
   padding: 10px;
+}
+
+@media (max-width: 1150px) {
+  .footer__row {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: repeat(2, minmax(min-content, 372px));
+    justify-content: stretch;
+    align-content: start;
+  }
+}
+@media (max-width: 840px) {
+  .footer__row {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: repeat(1, minmax(min-content, 372px));
+    justify-content: center;
+    align-content: start;
+  }
+}
+@media (max-width: 1115px) {
+  .icon {
+    display: block;
+    width: 50px;
+  }
 }

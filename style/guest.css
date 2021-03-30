@@ -109,7 +109,7 @@ table {
 }
 
 td {
-  border: 1px solid #00b956;
+  border: 1px solid #66cc99;
 
   border-radius: 8px;
   box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.25),
@@ -117,7 +117,7 @@ td {
   align-items: center;
   padding: 10px 20px;
   text-align: center;
-  color: #00b956;
+  color: #66cc99;
   margin-right: 10px;
 }
 
@@ -129,4 +129,15 @@ td {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 1250px) {
+  main .wrapper {
+    display: grid;
+    column-gap: 5%;
+    grid-template-columns: repeat(1, 0.8fr);
+    justify-content: stretch;
+    align-content: start;
+    font-family: "Open Sans", sans-serif;
+    padding: 15px;
+  }
 }

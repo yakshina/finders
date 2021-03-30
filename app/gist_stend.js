@@ -1,8 +1,9 @@
+Chart.defaults.global.defaultFontColor = '#fff';
 var ctx = document.getElementById('gist').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
+        labels: ['10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'],
    //      datasets : [
    //       {
    //           fillColor : "#48A497",
@@ -20,16 +21,16 @@ var myChart = new Chart(ctx, {
         {
          label: 
          'Впервые посетили павильон',
-         
+         color: 'rgba(255,255,255,1)',
          
          data: [36,24,15,44,12,32,10],
          backgroundColor: [
              'rgba(255,255,255,1)',
-             'rgba(0255,255,255,1)',
-             'rgba(0255,255,255,1)',
              'rgba(255,255,255,1)',
-             'rgba(0255,255,255,1)',
-             'rgba(0255,255,255,1)',
+             'rgba(255,255,255,1)',
+             'rgba(255,255,255,1)',
+             'rgba(255,255,255,1)',
+             'rgba(255,255,255,1)',
              'rgba(255,255,255,1)',
             
 
@@ -46,6 +47,9 @@ var myChart = new Chart(ctx, {
                     beginAtZero: true
                 }
             }]
-        }
+        },
+        legend: {
+            position: 'bottom'
+     }
     }
 });
