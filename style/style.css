@@ -418,6 +418,7 @@ td {
 @media screen and (max-width: 1050px) {
   header .topnav li {
     display: none;
+    transition-duration: 6s;
   }
   .menu-btn {
     display: block;
@@ -482,10 +483,6 @@ td {
     margin-right: -40px;
     transition-property: margin-top, background-color, color;
     transition-duration: 1s, 0.7s, 0.7s;
-  }
-  header .responsive li {
-    transition-delay: 2s;
-    transition-property: margin-top;
   }
 
   header .responsive ul {
