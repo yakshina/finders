@@ -11,6 +11,11 @@ h2 {
 li {
   margin-bottom: 16px;
 }
+button {
+  border: none;
+  outline: none;
+}
+
 main .wrapper {
   padding: 48px 0;
 }
@@ -64,10 +69,7 @@ li img {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-}
-.btnNaw button:hover {
-  background: #6868c5;
-  cursor: pointer;
+  transition-duration: 1s;
 }
 
 .stend {
@@ -97,10 +99,6 @@ li img {
   background-color: #66cc99;
   align-items: center;
   margin-right: 15px;
-}
-
-.stat .btn:hover {
-  background-color: #6868c5;
 }
 
 .heading {
@@ -148,6 +146,10 @@ canvas {
 
 .b {
   background-color: #e5e5e5;
+}
+button:hover {
+  background: #6868c5;
+  cursor: pointer;
 }
 @media (max-width: 1150px) {
   .row {

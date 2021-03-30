@@ -7,6 +7,8 @@ menu.onclick = function menunav() {
     else {
         x.className = "nav topnav";
     }
+
+    
     
 }
 
